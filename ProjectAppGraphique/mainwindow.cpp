@@ -4,6 +4,8 @@
 #include "HashGestion.h"
 #include "RSAGestion.h"
 #include "AesGestion.h"
+using namespace std;
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -24,8 +26,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_btn_sha256_clicked()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "/home", tr("Files (*.*)"));
-
+    HashGestion SHA;
+    cout << SHA.CalculateSHA256("c'est un chat") << endl;
 }
 
 
@@ -46,7 +48,8 @@ void MainWindow::on_btn_aes_clicked()
 
 void MainWindow::on_chiffreRSA_clicked()
 {
-
+    RsaGestion RSA;
+    RSA.generationClef("MatteoRSAPublic.pem", "MatteoRSAPrive.pem", 2048);
 }
 
 
@@ -58,12 +61,14 @@ void MainWindow::on_dechiffreRSA_clicked()
 
 void MainWindow::on_chiffreAES_clicked()
 {
-
+    AesGestion AES;
+    AES.GenerateAESKey();
+    AES.SaveAESKeyToFile("Key.txt");
 }
 
 
 void MainWindow::on_dechiffreAES_clicked()
 {
-
+    AesGestion AES;
 }
 

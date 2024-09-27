@@ -63,7 +63,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Generer une paire de clef</string>
+     <string>Chiffrer -&gt; Generer une paire de clef</string>
     </property>
    </widget>
    <widget class="QPushButton" name="dechiffreRSA">
@@ -76,7 +76,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Dechiffrer avec clef privé existante</string>
+     <string>Dechiffrer vec clef privé existante</string>
     </property>
    </widget>
    <widget class="QPushButton" name="dechiffreAES">
@@ -102,7 +102,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Generer une clef</string>
+     <string>Chiffrer -&gt; Generer clef secrete</string>
     </property>
    </widget>
   </widget>
