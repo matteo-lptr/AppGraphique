@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QFileDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,6 +24,14 @@ private slots:
     void on_btn_rsa_clicked();
 
     void on_btn_aes_clicked();
+
+    void on_dechiffreRSA_clicked();
+
+    void on_chiffreRSA_clicked();
+
+    void on_chiffreAES_clicked();
+
+    void on_dechiffreAES_clicked();
 
 private:
     Ui::MainWindow *ui;
