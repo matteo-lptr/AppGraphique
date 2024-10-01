@@ -6,7 +6,7 @@
 - Sélectionnez le fichier à hacher
 - Le fichier est sauvegardé
 
- ### RSA - Chiffrer
+### RSA - Chiffrer
  - Cliquez sur le bouton Chiffrement - RSA
  - Cliquez sur le bouton Chiffrer
  - Sélectionnez la clef public du destinataire du message
@@ -14,15 +14,15 @@
  - Sauvegarder le fichier déchiffré en lui donnant un nouveau nom
  - Le fichier est sauvegardé
 
-   ### RSA - Déchiffrer
-   - Cliquez sur le bouton Chiffrement - RSA
+### RSA - Déchiffrer
+  - Cliquez sur le bouton Chiffrement - RSA
    - Cliquez sur le bouton Déchiffrer
    - Sélectionnez la clef privé
    - Sélectionnez le fichier en RSA à déchiffrer
    - Sauvegarder le fichier déchiffré en lui donnant un nouveau nom
    - Le fichier est sauvegardé
   
-     ### AES - Chiffrer
+ ### AES - Chiffrer
      - Cliquez sur le bouton Chiffrement - AES
      - Cliquez sur le bouton Chiffrer
      - Sélectionnez la clef secrète
@@ -30,7 +30,7 @@
      - Sauvegardez le fichier chiffré en lui donnant un nouveau nom
      - Le fichier est sauvegardé
     
-       ### AES - Déchiffrer
+  ### AES - Déchiffrer
        - Cliquez sur le bouton Chiffrement - AES
        - Cliquez sur le bouton Déchiffrer
        - Sélectionnez la clef secrète
