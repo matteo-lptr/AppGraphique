@@ -69,6 +69,10 @@ void MainWindow::on_btn_rsa_clicked()
 {
     ui->chiffreRSA->setVisible(true);
     ui->dechiffreRSA->setVisible(true);
+    ui->chiffreAES->setVisible(false);
+    ui->dechiffreAES->setVisible(false);
+    ui->keyaes->setVisible(false);
+    ui->keyrsa->setVisible(false);
 }
 
 
@@ -76,17 +80,39 @@ void MainWindow::on_btn_aes_clicked()
 {
     ui->chiffreAES->setVisible(true);
     ui->dechiffreAES->setVisible(true);
+    ui->chiffreRSA->setVisible(false);
+    ui->dechiffreRSA->setVisible(false);
+    ui->keyaes->setVisible(false);
+    ui->keyrsa->setVisible(false);
 }
 
 void MainWindow::on_chiffreRSA_clicked()
 {
+    QString publicKeyPath = QFileDialog::getOpenFileName(this, "Sélectionner la clé publique");
+    QString filePath = QFileDialog::getOpenFileName(this, "Sélectionner le fichier à chiffrer");
+    QString outputPath = QFileDialog::getSaveFileName(this, "Sauvegarder le fichier chiffré");
 
+    if (!publicKeyPath.isEmpty() && !filePath.isEmpty() && !outputPath.isEmpty()) {
+        RsaGestion RSA;
+        RSA.chargementClefs("RSAPublic.pem", "RSAPrive.pem");
+        RSA.chiffrementFichier(filePath.toStdString(), outputPath.toStdString(), 2048);
+        QMessageBox::information(this, "Succès", "Fichier chiffré avec RSA");
+    }
 }
 
 
 void MainWindow::on_dechiffreRSA_clicked()
 {
+    QString privateKeyPath = QFileDialog::getOpenFileName(this, "Sélectionner la clé privée");
+    QString filePath = QFileDialog::getOpenFileName(this, "Sélectionner le fichier à déchiffrer");
+    QString outputPath = QFileDialog::getSaveFileName(this, "Sauvegarder le fichier déchiffré");
 
+    if (!privateKeyPath.isEmpty() && !filePath.isEmpty() && !outputPath.isEmpty()) {
+        RsaGestion RSA;
+        RSA.chargementClefs("RSAPublic.pem", "RSAPrive.pem");
+        RSA.dechiffrementFichier(filePath.toStdString(), outputPath.toStdString(), 2048);
+        QMessageBox::information(this, "Succès", "Fichier déchiffré avec RSA");
+    }
 }
 
 
@@ -120,6 +146,10 @@ void MainWindow::on_dechiffreAES_clicked()
 
 void MainWindow::on_generationclef_clicked()
 {
+    ui->chiffreRSA->setVisible(false);
+    ui->dechiffreRSA->setVisible(false);
+    ui->chiffreAES->setVisible(false);
+    ui->dechiffreAES->setVisible(false);
     ui->keyaes->setVisible(true);
     ui->keyrsa->setVisible(true);
 }
@@ -167,7 +197,7 @@ void MainWindow::on_keyaes_clicked()
     QString savePath = QFileDialog::getExistingDirectory(
         this,  // Widget parent (généralement la fenêtre principale)
         "Choisir le dossier de sauvegarde",  // Titre de la boîte de dialogue
-        QDir::homePath(),  // Chemin initial (ici, le dossier personnel de l'utilisateur)
+        QDir::currentPath() + "/BDD",  // Chemin initial
         QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks  // Options
         );
 
