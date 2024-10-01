@@ -1,8 +1,19 @@
 # AppGraphique
 
 ## Mode d'emploi
-### Génération de clefs
-- 
+### Génération de clef public et privé - RSA
+- Cliquez sur le bouton Génération clefs
+- Cliquez sur le bouton RSA
+- Donnez un nom pour les clefs
+- Sélectionnez le dossier de l'emplacement des clefs
+- Les clefs sont sauvegardées
+
+### Génération de clef secrète - AES
+- Cliquez sur le bouton Génération clefs
+- Cliquez sur le bouton AES
+- Donnez un nom pour la clef
+- Sélectionnez le dossier de l'empacement de la clef
+- La clef est sauvegardée
 
 ### Hash
 - Cliquez sur le bouton Hashage - SHA256
