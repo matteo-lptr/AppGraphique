@@ -33,6 +33,12 @@ private slots:
 
     void on_dechiffreAES_clicked();
 
+    void on_generationclef_clicked();
+
+    void on_keyrsa_clicked();
+
+    void on_keyaes_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
