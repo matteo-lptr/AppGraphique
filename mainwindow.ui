@@ -14,95 +14,213 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="keyrsa">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>140</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(32, 91, 83);
+color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>RSA</string>
+    </property>
+   </widget>
    <widget class="QPushButton" name="btn_sha256">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>100</y>
+      <x>210</x>
+      <y>120</y>
       <width>201</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(32, 91, 83);
+color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="text">
      <string>Hashage - SHA256</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_rsa">
+   <widget class="QPushButton" name="keyaes">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>300</y>
-      <width>201</width>
+      <x>780</x>
+      <y>140</y>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(32, 91, 83);
+color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+    </property>
     <property name="text">
-     <string>Chiffrement - RSA</string>
+     <string>AES</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_aes">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>430</y>
-      <width>201</width>
-      <height>41</height>
+      <x>0</x>
+      <y>0</y>
+      <width>1081</width>
+      <height>621</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;
+background-image: url(:/mapload.jpg);</string>
+    </property>
     <property name="text">
-     <string>Chiffrement - AES</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="chiffreRSA">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>280</y>
-      <width>211</width>
-      <height>31</height>
+      <x>360</x>
+      <y>270</y>
+      <width>241</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(32, 91, 83);
+color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+    </property>
     <property name="text">
-     <string>Chiffrer -&gt; Generer une paire de clef</string>
+     <string>Chiffrer avec clef public existante</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_aes">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>430</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(32, 91, 83);
+color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Chiffrement - AES</string>
     </property>
    </widget>
    <widget class="QPushButton" name="dechiffreRSA">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>360</x>
       <y>320</y>
-      <width>211</width>
-      <height>31</height>
+      <width>241</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(32, 91, 83);
+color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+    </property>
     <property name="text">
-     <string>Dechiffrer vec clef privé existante</string>
+     <string>Dechiffrer avec clef privé existante</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="dechiffreAES">
+   <widget class="QPushButton" name="generationclef">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>460</y>
-      <width>211</width>
-      <height>31</height>
+      <x>690</x>
+      <y>80</y>
+      <width>171</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(32, 91, 83);
+color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+    </property>
     <property name="text">
-     <string>Dechiffrer avec clef existante</string>
+     <string>Generation clefs</string>
     </property>
    </widget>
    <widget class="QPushButton" name="chiffreAES">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>420</y>
-      <width>211</width>
-      <height>31</height>
+      <x>360</x>
+      <y>410</y>
+      <width>241</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(32, 91, 83);
+color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+    </property>
     <property name="text">
-     <string>Chiffrer -&gt; Generer clef secrete</string>
+     <string>Chiffrer  avec clef secrète  existante</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dechiffreAES">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>460</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(32, 91, 83);
+color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Dechiffrer avec clef secrète existante</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_rsa">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>300</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(32, 91, 83);
+color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Chiffrement - RSA</string>
     </property>
    </widget>
   </widget>
